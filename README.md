@@ -37,7 +37,7 @@ This simple class for [MooTools](http://mootools.net) allows a block of content 
 ### Options
 - - -
 
-* **trigger** - _(object) Options for the element that will toggle the state of the content
+* **trigger** - _(object)_ Options for the element that will toggle the state of the content
 	* **type** - _(string)_ Element type _default_ `button`
 	* **altText** - _(string)_ Text used when state of content changes _default_ `Hide`
  	* **injectPos** - _(string)_ Where the button is injected in relation to the `container` _default_ 'bottom'
