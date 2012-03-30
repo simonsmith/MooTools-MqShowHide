@@ -94,6 +94,7 @@
 
             this.trigger.addEvent('click', function(event) {
                 (this.wrapper.isDisplayed() ? this.hide() : this.show());
+				this.fireEvent('click', event);
                 event.preventDefault();
             }.bind(this));
 
