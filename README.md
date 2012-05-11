@@ -22,7 +22,9 @@ This simple class for [MooTools](http://mootools.net) allows a block of content 
 		</div>
 		<button type="button" class="btn-show-hide btn-show-hide1">Show</button>
 	</div>
-	
+
+jsfiddle demo: http://jsfiddle.net/Blink/m7dXH/
+
 ## Usage
 	
 ### Arguments
@@ -51,6 +53,7 @@ This simple class for [MooTools](http://mootools.net) allows a block of content 
 - - -
 
 * **matched** - _(function)_ Media query passed to the `mq()` method has matched
+* **notMatched** - _(function)_ Media query passed to the `mq()` method has not matched
 * **reset** - _(function)_ Elements returned to their initial state
 * **hide** - _(function)_ Elements hidden
 * **show** - _(function)_ Elements visible

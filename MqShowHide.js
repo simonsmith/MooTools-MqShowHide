@@ -28,7 +28,7 @@
 !function(win) {
 
     /* matchMedia() polyfill - http://goo.gl/HDNN5 */
-    var matchMedia = win.matchMedia || (function(doc, undefined){
+    var matchMedia = win.matchMedia || (function(doc){
 
         var bool,
             docElem  = doc.documentElement,
@@ -109,6 +109,9 @@
             if (mqObj.matches) {
                 this.hide();
                 this.fireEvent('matched', [mqObj]);
+            } else {
+                this.reset();
+                this.fireEvent('notMatched', [mqObj]);
             }
 
             return this;
@@ -154,7 +157,7 @@
             this.wrapper.adopt(this.targetElems);
             this.container.grab(this.wrapper).grab(this.trigger, this.options.trigger.injectPos);
 
-        }.protect(),
+        }.protect()
 
     });
 
