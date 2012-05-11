@@ -2,6 +2,8 @@
 
 This simple class for [MooTools](http://mootools.net) allows a block of content to be hidden based on a [media query](http://webdesignerwall.com/tutorials/css3-media-queries) and then provide a button to show/hide the content. Useful on smaller devices when vertical space is a premium.
 
+jsfiddle demo: http://jsfiddle.net/Blink/m7dXH/
+
 **HTML:**
 
 ```html
@@ -29,7 +31,6 @@ new MqShowHide('.container', 'p').mq('(max-width: 480px)');
 </div>
 ```
 
-jsfiddle demo: http://jsfiddle.net/Blink/m7dXH/
 ## Usage
 	
 ### Arguments
