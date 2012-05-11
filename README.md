@@ -4,33 +4,40 @@ This simple class for [MooTools](http://mootools.net) allows a block of content 
 
 **HTML:**
 
-	<div class="container">
-		<p>Some content</p>
-		<p>More content</p>
-	</div>
+```html
+<div class="container">
+	<p>Some content</p>
+	<p>More content</p>
+</div>
+```
 	
 **JS:**
 
-	new MqShowHide('.container', 'p').mq('(max-width: 480px)');
+```js
+new MqShowHide('.container', 'p').mq('(max-width: 480px)');
+```
 	
 **Result:**	
 
-	<div class="container">
-		<div class="show-hide-container show-hide-container1">
-			<p>Some content</p>
-			<p>More content</p>
-		</div>
-		<button type="button" class="btn-show-hide btn-show-hide1">Show</button>
+```html
+<div class="container">
+	<div class="show-hide-container show-hide-container1">
+		<p>Some content</p>
+		<p>More content</p>
 	</div>
+	<button type="button" class="btn-show-hide btn-show-hide1">Show</button>
+</div>
+```
 
 jsfiddle demo: http://jsfiddle.net/Blink/m7dXH/
-
 ## Usage
 	
 ### Arguments
 - - -
 
-	new MqShowHide(container, targetElems, options);
+```js
+new MqShowHide(container, targetElems, options);
+```
 	
 1. **container** - _(mixed)_ String selector or an Element referencing the container
 2. **targetElems** - _(mixed)_ String selector or Element referencing the elements to be hidden
@@ -64,21 +71,30 @@ jsfiddle demo: http://jsfiddle.net/Blink/m7dXH/
 #### mq
 Runs a media query using `matchMedia` and if true, hides the content and shows the trigger element
 
-	MqShowHide.mq(mediaQuery);
+```js
+MqShowHide.mq(mediaQuery);
+```
 
 * **mediaQuery** - _(string)_ e.g. `'(max-width: 480px)'`
                   
 #### show
 Shows the elements
 
-	MqShowHide.show();
+```js
+MqShowHide.show();
+```
 	
 #### hide
 Hides the elements
 
-	MqShowHide.hide();
+```js
+MqShowHide.hide();
+```
 	
 #### reset
 Resets elements to initial state
 
-	MqShowHide.reset();
+
+```js
+MqShowHide.reset();
+```
