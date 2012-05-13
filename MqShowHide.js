@@ -24,10 +24,14 @@
  ...
  */
 
-!function(win) {
+(function (name, global, definition) {
+	if (typeof module !== 'undefined') module.exports = definition(name, global);
+	else if (typeof define === 'function' && typeof define.amd  === 'object') define(definition);
+	else global[name] = definition(name, global);
+})('MqShowHide', this, function (name, global) {
 
     /* matchMedia() polyfill - http://goo.gl/HDNN5 */
-    var matchMedia = win.matchMedia || (function(doc){
+    var matchMedia = global.matchMedia || (function(doc){
 
         var bool,
             docElem  = doc.documentElement,
@@ -55,7 +59,7 @@
 
     var instanceCount = 1;
 
-    win.MqShowHide = new Class({
+    return new Class({
 
         Implements: [Options, Events],
 
@@ -160,4 +164,4 @@
 
     });
 
-}(window);
+});
