@@ -49,6 +49,7 @@ new MqShowHide(container, targetElems, options);
 
 * **trigger** - _(object)_ Options for the element that will toggle the state of the content
 	* **type** - _(string)_ Element type _default_ `button`
+	* **text** - _(string)_ Initial button text _default_ `Show`
 	* **altText** - _(string)_ Text used when state of content changes _default_ `Hide`
  	* **injectPos** - _(string)_ Where the button is injected in relation to the `container` _default_ 'bottom'
   	* **attr** - _(object)_ Attributes applied to the trigger element

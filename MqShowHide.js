@@ -31,7 +31,7 @@
 })('MqShowHide', this, function (name, global) {
 
     /* matchMedia() polyfill - http://goo.gl/HDNN5 */
-    var matchMedia = global.matchMedia || (function(doc){
+    var matchMedia = global.matchMedia || Modernizr.mq || (function(doc){
 
         var bool,
             docElem  = doc.documentElement,
@@ -66,12 +66,12 @@
         options: {
             trigger: {
                 type: 'button',
+                text: 'Show',
                 altText: 'Hide',
                 injectPos: 'bottom',
                 attr: {
                     type: 'button',
-                    'class': 'show-hide-btn',
-                    text: 'Show'
+                    'class': 'show-hide-btn'
                 }
             },
             wrapper: {
@@ -97,7 +97,7 @@
 
             this.trigger.addEvent('click', function(event) {
                 (this.wrapper.isDisplayed() ? this.hide() : this.show());
-		this.fireEvent('click', event);
+		        this.fireEvent('click', event);
                 event.preventDefault();
             }.bind(this));
 
@@ -146,7 +146,7 @@
         hide: function() {
 
             this.wrapper.hide();
-            this.trigger.set('text', this.options.trigger.attr.text);
+            this.trigger.set('text', this.options.trigger.text);
 
             if (!this.trigger.isDisplayed()) this.trigger.show();
             this.fireEvent('hide');
