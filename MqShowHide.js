@@ -70,7 +70,6 @@
                 altText: 'Hide',
                 injectPos: 'bottom',
                 attr: {
-                    type: 'button',
                     'class': 'show-hide-btn'
                 }
             },
