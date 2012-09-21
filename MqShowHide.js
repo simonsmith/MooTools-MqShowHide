@@ -94,9 +94,11 @@
             this.trigger = new Element(trigOpt.type, trigOpt.attr).addClass(trigOpt.attr['class'] + instanceCount).hide();
             this.injectElems();
 
-            this.trigger.addEvent('click', function(event) {
+            var event = ('ontouchstart' in document.documentElement ? 'touchstart' : 'click');
+
+            this.trigger.addEvent(event, function(event) {
                 (this.wrapper.isDisplayed() ? this.hide() : this.show());
-		        this.fireEvent('click', event);
+		        this.fireEvent('trigger', event);
                 event.preventDefault();
             }.bind(this));
 
