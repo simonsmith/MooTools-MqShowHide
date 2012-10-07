@@ -39,7 +39,6 @@ new MqShowHide('.container', 'p').mq('(max-width: 480px)');
 ```js
 new MqShowHide(container, targetElems, options);
 ```
-	§
 1. **container** - _(mixed)_ String selector or an Element referencing the container
 2. **targetElems** - _(mixed)_ String selector or Element referencing the elements to be hidden
 3. **options** - _(object, optional)_ A key/value object for options
